@@ -1,0 +1,24 @@
+syntax = "proto3";
+package INF;
+
+message INF_Desc{
+  
+ message INF_Base{
+			int64		nBaseID        = 1;
+			string	strBaseName        = 2;
+			int32		nBaseThreashold = 3;
+			int32		nStatus        = 4;
+			int32		nLoadMode      = 5;
+     }
+message INF_Feature{
+		int64 nObjectID          = 1;
+		int32 nObjectThreashold   = 2;
+		int64 nFeatureID         = 3;
+		int32 nFeatureThreashold = 4;
+     }
+int32    inputnum = 1;
+repeated INF_Base base = 2;
+repeated INF_Feature feature = 3;
+}
+
+
